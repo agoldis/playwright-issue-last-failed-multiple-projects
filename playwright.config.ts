@@ -1,4 +1,4 @@
-import { devices, PlaywrightTestConfig } from "@playwright/test";
+import { PlaywrightTestConfig } from "@playwright/test";
 
 const config: PlaywrightTestConfig = {
   retries: 0,
@@ -13,17 +13,11 @@ const config: PlaywrightTestConfig = {
     {
       name: "a",
       testMatch: "a.spec.ts",
-      use: {
-        ...devices["Desktop Chrome"],
-      },
       outputDir: "test-results/a",
     },
     {
       name: "b",
       testMatch: "b.spec.ts",
-      use: {
-        ...devices["Desktop Chrome"],
-      },
       outputDir: "test-results/b",
     },
   ],
